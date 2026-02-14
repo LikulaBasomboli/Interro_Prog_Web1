@@ -2,53 +2,76 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Pharmacie DIBAPHAR - Accueil</title>
-    <!-- Lien vers le CSS (attention au chemin) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Pharmacie DIBAPHAR</title>
+    <!-- Lien vers notre feuille de style -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-    <header>
+    <!-- L'entête du site -->
+    <header class="entete-principale">
         <h1>PHARMACIE DIBAPHAR</h1>
         <p>Votre santé, notre priorité à Tshopo</p>
     </header>
 
-    <nav>
+    <!-- La barre de navigation -->
+    <nav class="barre-navigation">
         <ul>
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html" class="actif">Accueil</a></li>
             <li><a href="pages/a-propos.html">À Propos</a></li>
             <li><a href="pages/services.html">Nos Services</a></li>
-            <li><a href="pages/horaires.html">Horaires</a></li>
+            <li><a href="pages/galerie.html">Galerie</a></li>
             <li><a href="pages/contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section>
-            <h2>Bienvenue chez DIBAPHAR</h2>
-            <p>
-                Située au cœur de la commune <b>Tshopo</b>, sur la 9ème Avenue (route ancien goudron), 
-                juste en face du bar Inter-Tshopo, la pharmacie DIBAPHAR est là pour vous servir.
-            </p>
-            <!-- Image externe placeholder car je n'ai pas tes images locales -->
-            <img src="https://placehold.co/800x400?text=Vue+Exterieure+Pharmacie" alt="Vue extérieure de la pharmacie" class="img-responsive">
-            <!-- Remplace le src ci-dessus par : "ressources/vue-exterieure.jpg" -->
-        </section>
-
-        <aside>
+    <!-- Conteneur pour mettre la sidebar à gauche et le contenu à droite -->
+    <div class="conteneur-global">
+        
+        <!-- La barre latérale (Sidebar) -->
+        <aside class="barre-laterale">
+            <h3>Horaires d'ouverture</h3>
+            <ul>
+                <li>Lundi - Samedi : 08h00 - 20h00</li>
+                <li>Dimanche : Sur garde</li>
+            </ul>
+            <hr>
             <h3>Info Rapide</h3>
-            <p>Besoin d'un médicament en urgence ? Consultez nos horaires ou contactez-nous directement.</p>
-            <a href="pages/contact.html" class="btn-contact">Nous contacter</a>
+            <p>Nous sommes situés sur la route ancien goudron.</p>
+            <!-- Bouton pour le JavaScript -->
+            <button id="btn-urgence" type="button">Numéro d'urgence</button>
         </aside>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Pharmacie DIBAPHAR. Tous droits réservés.</p>
-        <p>Développé par <a href="#">LIKULA BASOMBOLI Jean-Louis</a></p>
-        <p>Date : <span id="date-jour">Chargement...</span></p>
+        <!-- Le contenu principal -->
+        <main class="contenu-principal">
+            <section class="section-bienvenue">
+                <h2>Bienvenue chez DIBAPHAR</h2>
+                <article>
+                    <p>
+                        Bienvenue sur le site officiel de la Pharmacie DIBAPHAR. 
+                        Située au cœur de la commune Tshopo, nous nous engageons à fournir des produits pharmaceutiques de qualité 
+                        à toute la population de la 9ème Avenue et ses environs.
+                    </p>
+                    <br>
+                    <p>
+                        Notre équipe est là pour vous écouter, vous conseiller et vous orienter vers les meilleurs soins.
+                        Nous respectons strictement les normes de conservation des médicaments.
+                    </p>
+                    <img src="ressources/exterieure.jpg" alt="Devanture de la pharmacie" class="image-article">
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    <!-- Le pied de page -->
+    <footer class="pied-de-page">
+        <p>&copy; 2026 Pharmacie DIBAPHAR. Tous droits réservés.</p>
+        <p>Site réalisé par <a href="https://portfolio-jeanlouis-likula.onrender.com/" target="_blank" class="lien-dev">LIKULA BASOMBOLI Jean-Louis</a></p>
     </footer>
 
-    <!-- Lien vers le JS (attention au chemin) -->
+    <!-- Lien vers notre script JavaScript -->
     <script src="scripts/main.js"></script>
 </body>
 </html>
