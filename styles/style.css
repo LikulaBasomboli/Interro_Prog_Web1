@@ -1,0 +1,207 @@
+/* Réinitialisation simple */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f0; /* Un vert très très clair */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Style de l'entête */
+.entete-principale {
+    background-color: #2E8B57; /* Vert SeaGreen (Couleur Pharmacie) */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #1e5c39;
+}
+
+.entete-principale h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Style de la navigation */
+.barre-navigation {
+    background-color: #333;
+    border-bottom: 2px solid #2E8B57;
+}
+
+.barre-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Utilisation de Flexbox pour aligner */
+    justify-content: center;
+}
+
+.barre-navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Effet Hover */
+.barre-navigation li a:hover {
+    background-color: #2E8B57;
+}
+
+/* Classe pour indiquer la page active */
+.actif {
+    background-color: #1e5c39;
+}
+
+/* Mise en page principale avec Flexbox */
+.conteneur-global {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto; /* Centrer le site */
+    background-color: rgba(255, 255, 255, 0.95); /* Fond blanc semi-transparent pour lire le texte */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* La sidebar (Aside) */
+.barre-laterale {
+    width: 25%; /* Prend 25% de la largeur */
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+/* Le contenu principal (Main) */
+.contenu-principal {
+    width: 75%; /* Prend 75% de la largeur */
+    padding: 20px;
+}
+
+/* Styles pour les titres */
+h2 {
+    color: #2E8B57;
+    border-bottom: 2px solid #2E8B57;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #1e5c39;
+}
+
+/* Images */
+.image-article {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 5px solid #ddd;
+    margin-top: 15px;
+}
+
+.image-moyenne {
+    width: 300px;
+    border: 1px solid #333;
+}
+
+/* Tableau */
+.tableau-services {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tableau-services th, .tableau-services td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.tableau-services th {
+    background-color: #2E8B57;
+    color: white;
+}
+
+.tableau-services tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Galerie */
+.galerie-conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo-item {
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Bouton */
+button {
+    background-color: #d32f2f; /* Rouge urgence */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+/* Pied de page */
+.pied-de-page {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 5px solid #2E8B57;
+}
+
+.lien-dev {
+    color: #2E8B57;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lien-dev:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Responsive simple pour mobile */
+@media screen and (max-width: 768px) {
+    .conteneur-global {
+        flex-direction: column; /* On empile les éléments */
+    }
+    
+    .barre-laterale {
+        width: 100%; /* Prend toute la largeur */
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        box-sizing: border-box; /* Pour que le padding ne casse pas la largeur */
+    }
+    
+    .contenu-principal {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .barre-navigation ul {
+        flex-direction: column;
+    }
+}
